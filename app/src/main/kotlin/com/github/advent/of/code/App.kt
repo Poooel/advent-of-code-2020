@@ -1,0 +1,20 @@
+package com.github.advent.of.code
+
+import com.github.ajalt.clikt.core.CliktCommand
+import com.github.ajalt.clikt.parameters.arguments.argument
+import com.github.ajalt.clikt.parameters.arguments.check
+import com.github.ajalt.clikt.parameters.types.int
+
+class App: CliktCommand() {
+    private val day by argument(help = "The number of the day you wish to execute").int().check("Value must be between 1 & 25") { it in 1..25 }
+    private val part by argument(help = "The part of the day you wish to execute").int().check("Value must be 1 or 2") { it in 1..2 }
+
+    override fun run() {
+        val input = InputFetcher.fetch(day)
+        val day = DayFetcher.fetch(day)
+
+        day.execute(part, input)
+    }
+}
+
+fun main(args: Array<String>) = App().main(args)
