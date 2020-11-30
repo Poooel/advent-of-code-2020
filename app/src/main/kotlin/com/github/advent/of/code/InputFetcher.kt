@@ -8,7 +8,7 @@ object InputFetcher {
     private val cookies = File("cookies").readText()
 
     fun fetch(day: Int): String {
-        val (_, _, result) = "https://adventofcode.com/2019/day/$day/input"
+        val (_, _, result) = "https://adventofcode.com/2020/day/$day/input"
             .httpGet()
             .header(Headers.COOKIE to "session=$cookies")
             .responseString()
