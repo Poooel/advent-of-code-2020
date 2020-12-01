@@ -12,7 +12,6 @@ dependencies {
     implementation("com.google.guava:guava:30.0-jre")
     implementation("com.github.ajalt.clikt:clikt:3.0.1")
     implementation("com.github.ajalt.mordant:mordant:2.0.0-alpha1")
-    implementation("io.github.microutils:kotlin-logging-jvm:2.0.3")
     implementation("com.github.kittinunf.fuel:fuel:2.3.0")
 }
 

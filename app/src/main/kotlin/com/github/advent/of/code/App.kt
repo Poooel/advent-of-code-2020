@@ -11,9 +11,10 @@ class App: CliktCommand() {
 
     override fun run() {
         val input = InputFetcher.fetch(day)
-        val day = DayFetcher.fetch(day)
+        val dayToExecute = DayFetcher.fetch(day)
+        val result = dayToExecute.execute(part, input)
 
-        day.execute(part, input)
+        println("The answer for day #$day part #$part is: $result")
     }
 }
 
