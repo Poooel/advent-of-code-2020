@@ -1,7 +1,7 @@
 package com.github.advent.of.code
 
 interface Executable {
-    fun execute(part: Int, input: String): String {
+    fun execute(part: Int, input: String): Any {
         return if (part == 1) {
             executePartOne(input)
         } else {
@@ -9,6 +9,6 @@ interface Executable {
         }
     }
 
-    fun executePartOne(input: String): String
-    fun executePartTwo(input: String): String
+    fun executePartOne(input: String): Any
+    fun executePartTwo(input: String): Any
 }
