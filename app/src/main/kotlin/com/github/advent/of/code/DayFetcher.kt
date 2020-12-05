@@ -1,9 +1,6 @@
 package com.github.advent.of.code
 
-import com.github.advent.of.code.days.Day01ReportRepair
-import com.github.advent.of.code.days.Day02PasswordPhilosophy
-import com.github.advent.of.code.days.Day03TobogganTrajectory
-import com.github.advent.of.code.days.Day04PassportProcessing
+import com.github.advent.of.code.days.*
 
 object DayFetcher {
     fun fetch(day: Int): Executable {
@@ -12,6 +9,7 @@ object DayFetcher {
             2 -> Day02PasswordPhilosophy()
             3 -> Day03TobogganTrajectory()
             4 -> Day04PassportProcessing()
+            5 -> Day05BinaryBoarding()
             else -> throw NotImplementedError()
         }
     }
