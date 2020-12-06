@@ -10,6 +10,7 @@ object DayFetcher {
             3 -> Day03TobogganTrajectory()
             4 -> Day04PassportProcessing()
             5 -> Day05BinaryBoarding()
+            6 -> Day06CustomCustoms()
             else -> throw NotImplementedError()
         }
     }
