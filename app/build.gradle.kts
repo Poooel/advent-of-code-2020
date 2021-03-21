@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.4.10"
+    kotlin("jvm") version "1.4.31"
     application
 }
 
@@ -10,8 +10,8 @@ repositories {
 
 dependencies {
     implementation("com.google.guava:guava:30.0-jre")
-    implementation("com.github.ajalt.clikt:clikt:3.0.1")
-    implementation("com.github.ajalt.mordant:mordant:2.0.0-alpha1")
+    implementation("com.github.ajalt.clikt:clikt:3.1.0")
+    implementation("com.github.ajalt.mordant:mordant:2.0.0-alpha2")
     implementation("com.github.kittinunf.fuel:fuel:2.3.0")
 }
 
