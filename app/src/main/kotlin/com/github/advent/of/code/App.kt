@@ -4,9 +4,9 @@ import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.parameters.arguments.argument
 import com.github.ajalt.clikt.parameters.arguments.check
 import com.github.ajalt.clikt.parameters.types.int
+import com.github.ajalt.mordant.rendering.TextColors.*
+import com.github.ajalt.mordant.rendering.TextStyles.*
 import com.github.ajalt.mordant.terminal.Terminal
-import com.github.ajalt.mordant.terminal.TextColors.*
-import com.github.ajalt.mordant.terminal.TextStyles.*
 
 class App: CliktCommand() {
     private val day by argument(help = "The number of the day you wish to execute").int().check("Value must be between 1 & 25") { it in 1..25 }
