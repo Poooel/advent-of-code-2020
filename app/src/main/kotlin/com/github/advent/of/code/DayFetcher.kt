@@ -12,6 +12,7 @@ object DayFetcher {
             5 -> Day05BinaryBoarding()
             6 -> Day06CustomCustoms()
             7 -> Day07HandyHaversacks()
+            8 -> Day08HandheldHalting()
             else -> throw NotImplementedError()
         }
     }
