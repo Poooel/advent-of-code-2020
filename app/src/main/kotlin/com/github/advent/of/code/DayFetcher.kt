@@ -11,6 +11,7 @@ object DayFetcher {
             4 -> Day04PassportProcessing()
             5 -> Day05BinaryBoarding()
             6 -> Day06CustomCustoms()
+            7 -> Day07HandyHaversacks()
             else -> throw NotImplementedError()
         }
     }
