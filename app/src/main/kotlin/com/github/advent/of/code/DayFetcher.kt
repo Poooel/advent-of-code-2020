@@ -14,6 +14,7 @@ object DayFetcher {
             7 -> Day07HandyHaversacks()
             8 -> Day08HandheldHalting()
             9 -> Day09EncodingError()
+            10 -> Day10AdapterArray()
             else -> throw NotImplementedError()
         }
     }
