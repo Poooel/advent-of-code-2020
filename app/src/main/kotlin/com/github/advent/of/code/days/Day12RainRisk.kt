@@ -36,7 +36,7 @@ class Day12RainRisk: Executable {
                 ship.move(value, orientation)
             } else if (isForward) {
                 val value = instruction.substring(1).toInt()
-                ship.move(value, null)
+                ship.forward(value)
             } else {
                 throw IllegalArgumentException("uh oh")
             }
@@ -57,14 +57,17 @@ class Day12RainRisk: Executable {
             }
         }
 
-        override fun move(value: Int, orientation: Orientation?) {
+        override fun move(value: Int, orientation: Orientation) {
             when(orientation) {
                 Orientation.NORTH -> y -= value
                 Orientation.EAST -> x += value
                 Orientation.SOUTH -> y += value
                 Orientation.WEST -> x -= value
-                null -> move(value, shipOrientation)
             }
+        }
+
+        override fun forward(value: Int) {
+            move(value, shipOrientation)
         }
 
         override fun manhattanDistance(): Int {
@@ -91,17 +94,18 @@ class Day12RainRisk: Executable {
             waypointY = (-tempX * sin(theta) + tempY * cos(theta)).roundToInt()
         }
 
-        override fun move(value: Int, orientation: Orientation?) {
+        override fun move(value: Int, orientation: Orientation) {
             when(orientation) {
                 Orientation.NORTH -> waypointY -= value
                 Orientation.EAST -> waypointX += value
                 Orientation.SOUTH -> waypointY += value
                 Orientation.WEST -> waypointX -= value
-                null -> {
-                    shipX += (waypointX * value)
-                    shipY += (waypointY * value)
-                }
             }
+        }
+
+        override fun forward(value: Int) {
+            shipX += (waypointX * value)
+            shipY += (waypointY * value)
         }
 
         override fun manhattanDistance(): Int {
@@ -111,7 +115,8 @@ class Day12RainRisk: Executable {
 
     private interface Ship {
         fun turn(value: Int, turn: Turn)
-        fun move(value: Int, orientation: Orientation? = null)
+        fun move(value: Int, orientation: Orientation)
+        fun forward(value: Int)
         fun manhattanDistance(): Int
     }
 
