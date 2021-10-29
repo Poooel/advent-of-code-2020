@@ -16,6 +16,7 @@ object DayFetcher {
             9 -> Day09EncodingError()
             10 -> Day10AdapterArray()
             11 -> Day11SeatingSystem()
+            12 -> Day12RainRisk()
             else -> throw NotImplementedError()
         }
     }
