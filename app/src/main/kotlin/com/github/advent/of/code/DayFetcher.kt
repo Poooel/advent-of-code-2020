@@ -17,6 +17,7 @@ object DayFetcher {
             10 -> Day10AdapterArray()
             11 -> Day11SeatingSystem()
             12 -> Day12RainRisk()
+            13 -> Day13ShuttleSearch()
             else -> throw NotImplementedError()
         }
     }
