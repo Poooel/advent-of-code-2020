@@ -15,6 +15,7 @@ object DayFetcher {
             8 -> Day08HandheldHalting()
             9 -> Day09EncodingError()
             10 -> Day10AdapterArray()
+            11 -> Day11SeatingSystem()
             else -> throw NotImplementedError()
         }
     }

@@ -13,6 +13,6 @@ object InputFetcher {
             .header(Headers.COOKIE to "session=$cookies")
             .responseString()
 
-        return result.get()
+        return result.get().trim()
     }
 }
