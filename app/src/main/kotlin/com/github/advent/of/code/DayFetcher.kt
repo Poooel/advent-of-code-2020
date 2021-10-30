@@ -19,6 +19,7 @@ object DayFetcher {
             12 -> Day12RainRisk()
             13 -> Day13ShuttleSearch()
             14 -> Day14DockingData()
+            15 -> Day15RambunctiousRecitation()
             else -> throw NotImplementedError()
         }
     }
