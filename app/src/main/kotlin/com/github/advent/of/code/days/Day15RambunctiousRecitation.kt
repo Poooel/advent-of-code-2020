@@ -28,7 +28,7 @@ class Day15RambunctiousRecitation: Executable {
                     val (a, b) = memory[lastNumberSpoken]!!.takeLast(2)
                     b - a
                 }
-                
+
                 memory.compute(lastNumberSpoken) { k, v ->
                     if (v == null) {
                         mutableListOf(turn + 1)

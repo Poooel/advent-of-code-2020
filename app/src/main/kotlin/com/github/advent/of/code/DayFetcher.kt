@@ -22,6 +22,7 @@ object DayFetcher {
             15 -> Day15RambunctiousRecitation()
             16 -> Day16TicketTranslation()
             17 -> Day17ConwayCubes()
+            18 -> Day18OperationOrder()
             else -> throw NotImplementedError()
         }
     }
